@@ -19,10 +19,10 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    
     "start": "npm install nodemon --save-dev && nodemon backend/index.js",
     "client": "npm start",
     "dev": "concurrently \"npm start\" \"npm run client\"",
+    "build": "react-scripts build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "eslintConfig": {
