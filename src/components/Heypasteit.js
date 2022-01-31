@@ -80,7 +80,7 @@ const Heypasteit = (props) => {
                                     <>
                                         <textarea required name="clipContent" id="clipContent" cols="30" rows="8" className='w-100' style={{ backgroundColor: '#FFF5E6', borderLeft: '2px solid #F9AB35', borderTop: '2px solid #F9AB35', borderBottom: '1px solid #F9AB35', borderRight: '1px solid #F9AB35', borderRadius: '5px' }} onChange={handleOnChange} placeholder='Enter your text here...'></textarea>
                                         <p><b>{clip.clipContent.split(/\s+/).filter((element) => { return element.length !== 0 }).length}</b> words and <b>{clip.clipContent.length}</b> characters</p>
-                                        <input type="file" name="clipFile" id="clipFile" onChange={handleFileChange} /><br /><br />
+                                        <input type="file" class="simple-file-upload" name="clipFile" id="clipFile" onChange={handleFileChange} /><br /><br />
                                         <input type="submit" value="Save This Clip" name='saveClip' id='saveClip' className='' style={{ padding: '8px 10px 8px 10px', borderRadius: '6px', marginLeft: '5px', backgroundColor: '#F9AB35', border: '1px solid #f8f9fa' }} />
                                     </>
                                     :
