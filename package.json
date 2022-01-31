@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "nodemon-start": "npm install nodemon",
     "start": "nodemon backend/index.js",
     "client": "npm start",
     "dev": "concurrently \"npm start\" \"npm run client\"",
