@@ -2,8 +2,8 @@ import { useState } from "react";
 import ClipContext from "./clipContext";
 
 const ClipState = (props) => {
-    const host = "https://clipper-saveit.herokuapp.com"
-    // const host = "http://localhost:5000"
+    // const host = "https://clipper-saveit.herokuapp.com"
+    const host = "http://localhost:5000"
     const clipsIntital = [];
     const [clips, setClips] = useState(clipsIntital);
 
