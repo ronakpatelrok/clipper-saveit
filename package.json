@@ -19,8 +19,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "nodemon-start": "npm install nodemon",
-    "start": "nodemon backend/index.js",
+    "start": "npm install nodemon && nodemon backend/index.js",
     "client": "npm start",
     "dev": "concurrently \"npm start\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
