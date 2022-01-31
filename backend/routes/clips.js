@@ -37,7 +37,7 @@ router.post('/createClip', [
         if (req.files) {
             var fl=req.files.file;
             // console.log(fl);
-            fl.mv('clipsImages/'+fl.name, function (err) {
+            fl.mv('../public/clipsImages/'+fl.name, function (err) {
                 /* if (err) {
                     success = false;
                     // res.json({error: 'Please enter a unique value for clip name'});
@@ -125,7 +125,7 @@ router.delete('/deleteclip', async (req, res) => {
             // fs.unlinkSync(path);
             let fl = JSON.parse(JSON.stringify(data))[0];
             if (fl.file !== '') {
-                fs.unlinkSync('clipsImages/'+fl.file);
+                fs.unlinkSync('../public/clipsImages/'+fl.file);
             }
             let success = true;
             let clip = await Clips.findOneAndDelete({ "destroy_on": { $lte : getCurrentDate(0) }});
