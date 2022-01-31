@@ -87,7 +87,7 @@ const Heypasteit = (props) => {
                                     <>
                                         <label htmlFor="clipName" className="mb-3">Clip will be destroyed on : {clips.destroy_on}</label>
                                         <textarea readOnly required name="clipContent" id="clipContent" cols="30" rows="8" className='w-100' style={{ backgroundColor: '#FFF5E6', borderLeft: '2px solid #F9AB35', borderTop: '2px solid #F9AB35', borderBottom: '1px solid #F9AB35', borderRight: '1px solid #F9AB35', borderRadius: '5px' }} value={clips.clipContent}></textarea>
-                                        {clips.file !== '' && <a href={`clipsImages/${clips.file}`} download={clips.file}>Download</a>}
+                                        {clips.file !== '' && <a href={`public/clipsImages/${clips.file}`} download={clips.file}>Download</a>}
                                     </>
                                 }
                             </form>

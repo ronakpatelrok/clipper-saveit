@@ -11,11 +11,12 @@ const app = express()
 dotenv.config();
 const port = 5000
 
+app.use(fileUpload());
+
 app.use(cors())
 app.use(express.json())
 
 // app.use(express.static('public'))
-app.use(fileUpload());
 // Available Routes
 // app.use('/api/auth', require('./routes/auth'))
 app.use('/api/clips', require('./routes/clips'))
@@ -25,6 +26,7 @@ __dirname = path.resolve();
 // console.log(process.env.NODE_ENV);
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static(path.join(__dirname,'/build')));
+  // app.use(express.static(path.join(__dirname,'/public')));
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
   });
